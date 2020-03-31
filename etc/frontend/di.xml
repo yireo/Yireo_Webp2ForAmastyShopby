@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Amasty\Shopby\Plugin\Ajax\ProductListWrapper">
+        <plugin name="yireo_webp2_patch_amasty_shopby_productlistwrapper" type="Yireo\Webp2ForAmastyShopby\Plugin\ReplaceImagesInShopbyOutputPlugin"/>
+    </type>
+</config>
