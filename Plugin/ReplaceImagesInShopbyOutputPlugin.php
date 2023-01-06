@@ -7,7 +7,7 @@ use Exception;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\View\LayoutInterface;
 use Amasty\Shopby\Plugin\Ajax\ProductListWrapper;
-use Yireo\Webp2\Image\HtmlReplacer;
+use Yireo\NextGenImages\Util\HtmlReplacer;
 
 /**
  * Class ReplaceImagesInShopbyOutputPlugin
@@ -22,21 +22,14 @@ class ReplaceImagesInShopbyOutputPlugin
     private $htmlReplacer;
 
     /**
-     * @var LayoutInterface
-     */
-    private $layout;
-
-    /**
      * TestPlugin constructor.
      * @param HtmlReplacer $htmlReplacer
      * @param LayoutInterface $layout
      */
     public function __construct(
-        HtmlReplacer $htmlReplacer,
-        LayoutInterface $layout
+        HtmlReplacer $htmlReplacer
     ) {
         $this->htmlReplacer = $htmlReplacer;
-        $this->layout = $layout;
     }
 
     /**
@@ -50,6 +43,6 @@ class ReplaceImagesInShopbyOutputPlugin
      */
     public function afterAfterToHtml(ProductListWrapper $subject, $result): string
     {
-        return $this->htmlReplacer->replaceImagesInHtml($this->layout, $result);
+        return $this->htmlReplacer->replace($result);
     }
 }
