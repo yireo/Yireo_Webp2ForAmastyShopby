@@ -1,7 +1,7 @@
 {
     "name": "yireo/magento2-webp2-for-amasty-shopby",
     "license": "OSL-3.0",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "type": "magento2-module",
     "homepage": "https://github.com/yireo/Yireo_Webp2ForAmastyShopby",
     "description": "Magento 2 add-on to make Yireo_Webp2 work with Amasty_Shopby",
@@ -14,7 +14,7 @@
     "require": {
         "magento/framework": ">=102.0",
         "amasty/shopby": ">=2.13",
-        "yireo/magento2-webp2": "^0.10"
+        "yireo/magento2-webp2": "~0.10"
     },
     "require-dev": {
         "phpunit/phpunit": "*",
