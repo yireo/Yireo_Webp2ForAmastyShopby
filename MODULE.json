@@ -1,1 +1,8 @@
-{}
+{
+    "module_name": "Yireo_Webp2ForAmastyShopby",
+    "composer_name": "yireo/magento2-webp2-for-amasty-shopby",
+    "sequence": [
+        "Yireo_Webp2",
+        "Amasty_Shopby"
+    ]
+}
