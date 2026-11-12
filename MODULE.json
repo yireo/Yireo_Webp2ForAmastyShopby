@@ -3,8 +3,10 @@
     "composer_name": "yireo/magento2-webp2-for-amasty-shopby",
     "sequence": [
         "Yireo_Webp2",
-        "Amasty_Shopby"
+        "Amasty_Shopby",
+        "Magento_Store",
+        "Yireo_NextGenImages"
     ],
     "phpcs_severity": "6",
-    "phpstan_level": "1"
+    "phpstan_level": "9"
 }
