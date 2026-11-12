@@ -4,5 +4,7 @@
     "sequence": [
         "Yireo_Webp2",
         "Amasty_Shopby"
-    ]
+    ],
+    "phpcs_severity": "6",
+    "phpstan_level": "1"
 }
