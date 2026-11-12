@@ -14,11 +14,9 @@
     "require": {
         "magento/framework": ">=102.0",
         "amasty/shopby": ">=2.13",
+        "magento/module-store": "^101.1",
+        "yireo/magento2-next-gen-images": "~0.5.16",
         "yireo/magento2-webp2": "~0.10"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "*",
-        "composer/composer": "*@dev"
     },
     "autoload": {
         "psr-4": {

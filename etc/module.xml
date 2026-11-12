@@ -4,6 +4,8 @@
         <sequence>
             <module name="Yireo_Webp2" />
             <module name="Amasty_Shopby" />
+            <module name="Magento_Store" />
+            <module name="Yireo_NextGenImages" />
         </sequence>
     </module>
 </config>

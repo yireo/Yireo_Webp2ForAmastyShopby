@@ -5,7 +5,6 @@ namespace Yireo\Webp2ForAmastyShopby\Plugin;
 
 use Exception;
 use Magento\Framework\Exception\LocalizedException;
-use Magento\Framework\View\LayoutInterface;
 use Amasty\Shopby\Plugin\Ajax\ProductListWrapper;
 use Yireo\NextGenImages\Util\HtmlReplacer;
 
@@ -22,9 +21,7 @@ class ReplaceImagesInShopbyOutputPlugin
     private $htmlReplacer;
 
     /**
-     * TestPlugin constructor.
      * @param HtmlReplacer $htmlReplacer
-     * @param LayoutInterface $layout
      */
     public function __construct(
         HtmlReplacer $htmlReplacer
@@ -36,7 +33,7 @@ class ReplaceImagesInShopbyOutputPlugin
      * Interceptor of ProductListWrapper::afterToHtml()
      *
      * @param ProductListWrapper $subject
-     * @param $result
+     * @param string $result
      * @return string
      * @throws LocalizedException
      * @throws Exception
