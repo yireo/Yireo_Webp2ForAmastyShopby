@@ -3,43 +3,33 @@ declare(strict_types=1);
 
 namespace Yireo\Webp2ForAmastyShopby\Plugin;
 
-use Exception;
-use Magento\Framework\Exception\LocalizedException;
 use Amasty\Shopby\Plugin\Ajax\ProductListWrapper;
+use Yireo\NextGenImages\Config\Config;
 use Yireo\NextGenImages\Util\HtmlReplacer;
 
-/**
- * Class ReplaceImagesInShopbyOutputPlugin
- *
- * @package Yireo\Webp2ForAmastyShopby\Plugin
- */
 class ReplaceImagesInShopbyOutputPlugin
 {
-    /**
-     * @var HtmlReplacer
-     */
-    private $htmlReplacer;
-
-    /**
-     * @param HtmlReplacer $htmlReplacer
-     */
     public function __construct(
-        HtmlReplacer $htmlReplacer
+        private readonly HtmlReplacer $htmlReplacer,
+        private readonly Config $config
     ) {
-        $this->htmlReplacer = $htmlReplacer;
     }
 
     /**
-     * Interceptor of ProductListWrapper::afterToHtml()
-     *
      * @param ProductListWrapper $subject
-     * @param string $result
-     * @return string
-     * @throws LocalizedException
-     * @throws Exception
+     * @param mixed $result
+     * @return mixed
      */
-    public function afterAfterToHtml(ProductListWrapper $subject, $result): string
+    public function afterAfterToHtml(ProductListWrapper $subject, mixed $result): mixed
     {
+        if (!is_string($result) || $result === '') {
+            return $result;
+        }
+
+        if (!$this->config->enabled()) {
+            return $result;
+        }
+
         return $this->htmlReplacer->replace($result);
     }
 }
